@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe WikisController, type: :controller do
+
+  let(:user) {create :user}
+
   before :example do
-    let(:user) {create :user}
     sign_in user
   end
 
